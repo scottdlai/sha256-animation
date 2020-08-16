@@ -4,7 +4,7 @@ import to64bits from "../utilities/to64bits";
 import sleep from '../utilities/sleep';
 import speed from '../utilities/speed';
 import title from '../utilities/title';
-import { yellow } from 'chalk';
+import { yellow, green } from 'chalk';
 
 /**
  * Returns the padded message.
@@ -46,6 +46,7 @@ export async function paddingAnimation(message: string) {
   stdout.write(message);
   await sleep(speed.slow);
   stdout.write(yellow`1`);
+  await sleep(speed.slow);
 
   let K = (512 - message.length - 1 - 64) % 512;
 
@@ -62,7 +63,7 @@ export async function paddingAnimation(message: string) {
 
   const L = to64bits(message.length);
 
-  stdout.write(L);
+  stdout.write(green `${L}`);
 
   return padded;
 }
