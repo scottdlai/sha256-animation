@@ -12,7 +12,7 @@ import { yellow } from 'chalk';
  * @param message binary string to be padded
  */
 export default function padding(message: string) {
-  if (!message.match(/^[0-1]{0, }$/g)) {
+  if (!message.match(/^[0-1]{0,}$/g)) {
     throw new Error('NOT A BINARY STRING ' + message);
   }
 
@@ -33,7 +33,7 @@ export default function padding(message: string) {
  * @param message binary string to be padded
  */
 export async function paddingAnimation(message: string) {
-  if (!message.match(/^[0-1]{0, }$/g)) {
+  if (!message.match(/^[0-1]{0,}$/g)) {
     throw new Error('NOT A BINARY STRING ' + message);
   }
 
@@ -54,7 +54,7 @@ export async function paddingAnimation(message: string) {
   }
 
   for (let i = 0; i < K; i += 1) {
-    await sleep(speed.normal);
+    await sleep(speed.fast);
     stdout.write('0');
   }
 
