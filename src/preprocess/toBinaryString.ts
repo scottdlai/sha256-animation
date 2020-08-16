@@ -18,6 +18,12 @@ export default function toBinaryString(message: string) {
     .join('');
 }
 
+/**
+ * Animate the process of converting message string to binary string and returns
+ * the result.
+ * 
+ * @param message message to be converted
+ */
 export async function toBinaryStringAnimation(message: string) {
   const binaryString = toBinaryString(message);
 
