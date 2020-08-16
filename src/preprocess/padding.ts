@@ -9,7 +9,7 @@ import { yellow } from 'chalk';
 /**
  * Returns the padded message.
  * 
- * @param message binary string
+ * @param message binary string to be padded
  */
 export default function padding(message: string) {
   if (!message.match(/^[0-1]{0, }$/g)) {
@@ -27,6 +27,11 @@ export default function padding(message: string) {
   return `${message}1${'0'.repeat(K)}${L}`;
 }
 
+/**
+ * Animates the process of padding and returns the result.
+ * 
+ * @param message binary string to be padded
+ */
 export async function paddingAnimation(message: string) {
   if (!message.match(/^[0-1]{0, }$/g)) {
     throw new Error('NOT A BINARY STRING ' + message);
