@@ -38,6 +38,7 @@ export async function toBinaryStringAnimation(message: string) {
   stdout.write('bits:    ');
   await sleep(speed.normal);
   stdout.write(binaryString);
+  await sleep(speed.normal);
 
   return binaryString;
 }
