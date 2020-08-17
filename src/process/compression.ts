@@ -5,7 +5,12 @@ import add from '../operations/add';
 import upperSigma0 from '../functions/upperSigma0';
 import majority from '../functions/majority';
 import { stdout } from 'process';
-import { clearTerminal, cursorSavePosition, cursorRestorePosition, eraseDown } from 'ansi-escapes';
+import {
+  clearTerminal,
+  cursorSavePosition,
+  cursorRestorePosition,
+  eraseDown,
+} from 'ansi-escapes';
 import sleep from '../utilities/sleep';
 import speed from '../utilities/speed';
 import title from '../utilities/title';
@@ -47,13 +52,13 @@ export async function compressionAnimation(
   [a, b, c, d, e, f, g, h]: string[]
 ) {
   await initRegisters([a, b, c, d, e, f, g, h]);
-  
+
   await sleep(speed.slow);
 
   stdout.write(clearTerminal);
-  stdout.write(cursorSavePosition);
   await sleep(speed.medium);
   stdout.write(title('compression'));
+  stdout.write(cursorSavePosition);
   await sleep(speed.medium);
 
   for (let i = 0; i < 64; i += 1) {

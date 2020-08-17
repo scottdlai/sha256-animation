@@ -2,6 +2,7 @@ import { stdout } from 'process';
 import { clearTerminal } from 'ansi-escapes';
 import sleep from '../utilities/sleep';
 import speed from '../utilities/speed';
+import title from '../utilities/title';
 
 /** First 8 prime numbers. */
 const primes = [2, 3, 5, 7, 11, 13, 17, 19];
@@ -22,7 +23,7 @@ const H = squareRootPrimes.map((squareRootPrime) => {
 export async function hAnimation() {
   stdout.write(clearTerminal);
   await sleep(speed.medium);
-  stdout.write('initialize hash');
+  stdout.write(title('initialize hash'));
   await sleep(speed.medium);
 
   stdout.write(`h0 = √02 = ${H[0]}\n`);
@@ -40,7 +41,7 @@ export async function hAnimation() {
   stdout.write(`h6 = √17 = ${H[6]}\n`);
   await sleep(speed.medium);
   stdout.write(`h7 = √19 = ${H[7]}`);
-  
+
   return H;
 }
 
