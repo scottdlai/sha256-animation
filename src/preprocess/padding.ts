@@ -19,7 +19,7 @@ export default function padding(message: string) {
   let K = (512 - message.length - 1 - 64) % 512;
 
   if (K < 0) {
-    K = (K + 512) % 512;
+    K = K + 512;
   }
 
   const L = to64bits(message.length);
@@ -51,7 +51,7 @@ export async function paddingAnimation(message: string) {
   let K = (512 - message.length - 1 - 64) % 512;
 
   if (K < 0) {
-    K = (K + 512) % 512;
+    K = K + 512;
   }
 
   for (let i = 0; i < K; i += 1) {
