@@ -11,8 +11,8 @@ export default function toChunks(binaryString: string): string[] {
   }
 
   const chunks = binaryString.match(/[0-1]{512}/g) ?? [];
-
-  return chunks.map((match) => match.toString());
+  
+  return chunks;
 }
 
 export async function toChunksAnimation(binaryString: string) {
