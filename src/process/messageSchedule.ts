@@ -13,8 +13,13 @@ import sleep from '../utilities/sleep';
 import speed from '../utilities/speed';
 import title from '../utilities/title';
 
+/**
+ * Returns the message schedule array on the specified chunk of message.
+ *
+ * @param chunk 512-bit block of message
+ */
 export default function messageSchedule(chunk: string): string[] {
-  if (!chunk.match(/^[0-1]{512}$/g)) {
+  if (!/^[0-1]{512}$/g.test(chunk)) {
     throw new Error('NOT A 512 BIT CHUNK');
   }
 
@@ -30,8 +35,14 @@ export default function messageSchedule(chunk: string): string[] {
   return w;
 }
 
+/**
+ * Animates the process of making the message schedule array on the specified
+ * chunk of message and returns the result.
+ *
+ * @param chunk 512-bit block of message
+ */
 export async function messageScheduleAnimation(chunk: string) {
-  if (!(/^[0-1]{512}$/g).test(chunk)) {
+  if (!/^[0-1]{512}$/g.test(chunk)) {
     throw new Error('NOT A 512 BIT CHUNK ' + chunk);
   }
 
