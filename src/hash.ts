@@ -95,6 +95,24 @@ export async function hashAnimation(message: string) {
   }
 
   await sleep(speed.slow);
+  await printFinalHash(message, h0, h1, h2, h3, h4, h5, h6, h7);
+
+  stdout.write('\n');
+
+  return [h0, h1, h2, h3, h4, h5, h6, h7].map(toHex).join('');
+}
+
+async function printFinalHash(
+  message: string,
+  h0: string,
+  h1: string,
+  h2: string,
+  h3: string,
+  h4: string,
+  h5: string,
+  h6: string,
+  h7: string
+) {
   stdout.write('\n');
   stdout.write(title('final hash'));
   await sleep(speed.medium);
@@ -117,10 +135,6 @@ export async function hashAnimation(message: string) {
   stdout.write(yellow(toHex(h6)));
   await sleep(speed.medium);
   stdout.write(yellow(toHex(h7)));
-
-  stdout.write('\n');
-
-  return [h0, h1, h2, h3, h4, h5, h6, h7].map(toHex).join('');
 }
 
 async function updateHash(current: string[], registers: string[]) {
