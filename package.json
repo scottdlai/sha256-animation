@@ -1,6 +1,6 @@
 {
   "name": "sha256-animation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Animation of the SHA 256 algorithm",
   "repository": {
     "type": "git",
