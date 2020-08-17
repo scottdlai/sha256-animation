@@ -3,7 +3,7 @@ import to32bits from '../utilities/to32bits';
 
 /**
  * Returns the xor of the binary strings.
- * 
+ *
  * @param binaryStrings 2 or more binary strings
  */
 export default function xor(...binaryStrings: string[]): string {

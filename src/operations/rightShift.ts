@@ -1,10 +1,10 @@
-import parse2Comp from "../utilities/parse2Comp";
-import to32bits from "../utilities/to32bits";
+import parse2Comp from '../utilities/parse2Comp';
+import to32bits from '../utilities/to32bits';
 
 /**
- * Returns the right shift by the specified amount of the specified binary 
+ * Returns the right shift by the specified amount of the specified binary
  * string as a binary string of length 32.
- * 
+ *
  * @param s binary string to be rotated
  * @param n amount of rotation
  */

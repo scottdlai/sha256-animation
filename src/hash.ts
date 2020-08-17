@@ -1,10 +1,12 @@
-import toBinaryString from "./preprocess/toBinaryString";
-import padding from "./preprocess/padding";
-import toChunks from "./preprocess/toChunks";
-import messageSchedule, { messageScheduleAnimation } from "./process/messageSchedule";
-import H from "./constants/H";
-import compression from "./process/compression";
-import add from "./operations/add";
+import toBinaryString from './preprocess/toBinaryString';
+import padding from './preprocess/padding';
+import toChunks from './preprocess/toChunks';
+import messageSchedule, {
+  messageScheduleAnimation,
+} from './process/messageSchedule';
+import H from './constants/H';
+import compression from './process/compression';
+import add from './operations/add';
 
 export default function hash(message: string) {
   const binary = toBinaryString(message);
@@ -38,7 +40,7 @@ export default function hash(message: string) {
     h6 = add(h6, g);
     h7 = add(h7, h);
   }
-  
+
   return [h0, h1, h2, h3, h4, h5, h6, h7].map(toHex).join('');
 }
 

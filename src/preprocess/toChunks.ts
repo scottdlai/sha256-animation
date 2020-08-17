@@ -1,9 +1,9 @@
-import { stdout } from "process";
+import { stdout } from 'process';
 import { clearTerminal } from 'ansi-escapes';
-import sleep from "../utilities/sleep";
-import speed from "../utilities/speed";
-import title from "../utilities/title";
-import { green } from "chalk";
+import sleep from '../utilities/sleep';
+import speed from '../utilities/speed';
+import title from '../utilities/title';
+import { green } from 'chalk';
 
 export default function toChunks(binaryString: string): string[] {
   if (!binaryString.match(/^[0-1]{512,}$/g)) {
@@ -11,7 +11,7 @@ export default function toChunks(binaryString: string): string[] {
   }
 
   const chunks = binaryString.match(/[0-1]{512}/g) ?? [];
-  
+
   return chunks;
 }
 

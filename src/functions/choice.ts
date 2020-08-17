@@ -1,5 +1,5 @@
-import parse2Comp from "../utilities/parse2Comp";
-import to32bits from "../utilities/to32bits";
+import parse2Comp from '../utilities/parse2Comp';
+import to32bits from '../utilities/to32bits';
 
 /**
  * Returns a new binary string based on the choice of the x. i.e. if the bit of
@@ -14,5 +14,5 @@ export default function choice(x: string, y: string, z: string): string {
   const b = parse2Comp(y);
   const c = parse2Comp(z);
 
-  return to32bits(a & b | ~a & c);
+  return to32bits((a & b) | (~a & c));
 }

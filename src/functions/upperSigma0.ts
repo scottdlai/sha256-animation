@@ -1,9 +1,9 @@
-import rightRotate from "../operations/rightRoate";
-import xor from "../operations/xor";
+import rightRotate from '../operations/rightRoate';
+import xor from '../operations/xor';
 
 /**
  * Returns the Sigma0 of the specified binary string.
- * 
+ *
  * @param s binary string
  */
 export default function upperSigma0(s: string): string {

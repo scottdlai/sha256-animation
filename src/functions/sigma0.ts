@@ -1,10 +1,10 @@
-import rightRotate from "../operations/rightRoate";
-import rightShift from "../operations/rightShift";
-import xor from "../operations/xor";
+import rightRotate from '../operations/rightRoate';
+import rightShift from '../operations/rightShift';
+import xor from '../operations/xor';
 
 /**
  * Returns the sigma0 of the specified binary string.
- * 
+ *
  * @param s binary string
  */
 export default function sigma0(s: string): string {

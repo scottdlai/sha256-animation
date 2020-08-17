@@ -7,21 +7,19 @@ import { yellow } from 'chalk';
 
 /**
  * Convert the message string to binary string.
- * 
+ *
  * @param message message to be converted
  */
 export default function toBinaryString(message: string) {
   const byteArray = toByteArray(message);
 
-  return byteArray
-    .map((byte) => byte.toString(2).padStart(8, '0'))
-    .join('');
+  return byteArray.map((byte) => byte.toString(2).padStart(8, '0')).join('');
 }
 
 /**
  * Animate the process of converting message string to binary string and returns
  * the result.
- * 
+ *
  * @param message message to be converted
  */
 export async function toBinaryStringAnimation(message: string) {
@@ -45,11 +43,9 @@ export async function toBinaryStringAnimation(message: string) {
 
 /**
  * Returns the byte array of the specified message.
- * 
+ *
  * @param message message to be converted
  */
 function toByteArray(message: string) {
-  return message
-    .split('')
-    .map((character) => character.charCodeAt(0));
+  return message.split('').map((character) => character.charCodeAt(0));
 }
