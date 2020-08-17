@@ -1,4 +1,10 @@
 import { stdout, argv } from 'process';
-import { toBinaryStringAnimation } from './preprocess/toBinaryString';
+import hash from './hash';
 
-toBinaryStringAnimation(argv[2] ?? 'abc');
+// stdout.write(hash('abc'));
+
+async function main() {
+  console.log(hash(argv[2] ?? 'abc'));
+}
+
+main();

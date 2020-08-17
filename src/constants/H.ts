@@ -11,7 +11,7 @@ const squareRootPrimes = primes.map((prime) => Math.pow(prime, 1 / 2));
 const H = squareRootPrimes.map((squareRootPrime) => {
   const decimalPart = squareRootPrime - Math.floor(squareRootPrime);
 
-  return decimalPart.toString().substring(2, 34);
+  return decimalPart.toString(2).substring(2, 34);
 });
 
 export default H;
