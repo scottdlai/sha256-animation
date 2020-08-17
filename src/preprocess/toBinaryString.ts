@@ -28,17 +28,17 @@ export async function toBinaryStringAnimation(message: string) {
   const binaryString = toBinaryString(message);
 
   stdout.write(clearTerminal);
-  await sleep(speed.normal);
+  await sleep(speed.medium);
   stdout.write(title('message'));
-  await sleep(speed.normal);
+  await sleep(speed.medium);
   stdout.write('message: ');
-  await sleep(speed.normal);
+  await sleep(speed.medium);
   stdout.write(yellow(message) + '\n');
-  await sleep(speed.normal);
+  await sleep(speed.medium);
   stdout.write('bits:    ');
-  await sleep(speed.normal);
+  await sleep(speed.medium);
   stdout.write(binaryString);
-  await sleep(speed.normal);
+  await sleep(speed.medium);
 
   return binaryString;
 }

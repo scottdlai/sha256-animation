@@ -40,9 +40,9 @@ export async function paddingAnimation(message: string) {
   const padded = padding(message);
 
   stdout.write(clearTerminal);
-  await sleep(speed.normal);
+  await sleep(speed.medium);
   stdout.write(title(`padding ${message.length} -> ${padded.length}`));
-  await sleep(speed.normal);
+  await sleep(speed.medium);
   stdout.write(message);
   await sleep(speed.slow);
   stdout.write(yellow`1`);
