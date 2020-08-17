@@ -33,10 +33,6 @@ export default function padding(message: string) {
  * @param message binary string to be padded
  */
 export async function paddingAnimation(message: string) {
-  if (!message.match(/^[0-1]{0,}$/g)) {
-    throw new Error('NOT A BINARY STRING ' + message);
-  }
-
   const padded = padding(message);
 
   stdout.write(clearTerminal);
