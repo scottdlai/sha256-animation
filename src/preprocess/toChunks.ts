@@ -32,7 +32,6 @@ export async function toChunksAnimation(binaryString: string) {
   stdout.write(clearTerminal);
   await sleep(speed.medium);
   stdout.write(title('chunks (512 bits)'));
-  await sleep(speed.slow);
 
   for (let i = 0; i < chunks.length; i += 1) {
     await sleep(speed.medium);
@@ -55,7 +54,7 @@ export async function toChunksAnimation(binaryString: string) {
 export async function displayChunk(chunks: string[], i: number) {
   stdout.write(clearTerminal);
   await sleep(speed.medium);
-  stdout.write(title(`chunk ${i}`));
+  stdout.write(title(`current block [${i}]`));
   await sleep(speed.medium);
   stdout.write(chunks[i]);
 }
