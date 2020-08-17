@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { argv } from 'process';
 import hash, { hashAnimation } from './hash';
 import { program } from 'commander';
