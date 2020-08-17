@@ -14,8 +14,8 @@
     "dev": "node build/index.js",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["SHA 256", "animation"],
+  "author": "Scott",
   "license": "ISC",
   "dependencies": {
     "ansi-escapes": "^4.3.1",
