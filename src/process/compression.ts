@@ -5,6 +5,12 @@ import add from "../operations/add";
 import upperSigma0 from "../functions/upperSigma0";
 import majority from "../functions/majority";
 
+/**
+ * Returns the value of the 8 registers after 1 round of compression.
+ * 
+ * @param w message schedule word array
+ * @param hs array of initial value of the 8 registers 
+ */
 export default function compression(
   w: string[],
   [a, b, c, d, e, f, g, h]: string[]
