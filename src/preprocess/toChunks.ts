@@ -45,3 +45,17 @@ export async function toChunksAnimation(binaryString: string) {
 
   return chunks;
 }
+
+/**
+ * Displays the chunk at index i to console.
+ *  
+ * @param chunks array of chunk
+ * @param i index in which to bring the chunk
+ */
+export async function displayChunk(chunks: string[], i: number) {
+  stdout.write(clearTerminal);
+  await sleep(speed.medium);
+  stdout.write(title(`chunk ${i}`));
+  await sleep(speed.medium);
+  stdout.write(chunks[i]);
+}
