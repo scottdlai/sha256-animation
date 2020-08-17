@@ -94,6 +94,7 @@ export async function hashAnimation(message: string) {
     );
   }
 
+  await sleep(speed.slow);
   stdout.write('\n');
   stdout.write(title('final hash'));
   await sleep(speed.medium);
