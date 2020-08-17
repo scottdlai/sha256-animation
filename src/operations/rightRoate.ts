@@ -1,4 +1,4 @@
-import parse2Comp from '../utilities/parse2Comp';
+import int32 from '../utilities/int32';
 import to32bits from '../utilities/to32bits';
 
 export default function rightRotate(s: string, n: number): string {
@@ -6,7 +6,7 @@ export default function rightRotate(s: string, n: number): string {
     throw new Error('INVALID AMOUNT OF ROTATION');
   }
 
-  const number = parse2Comp(s);
+  const number = int32(s);
 
   return to32bits((number >>> n) | (number << (32 - n)));
 }

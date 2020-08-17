@@ -1,4 +1,4 @@
-import parse2Comp from '../utilities/parse2Comp';
+import int32 from '../utilities/int32';
 import to32bits from '../utilities/to32bits';
 
 /**
@@ -11,7 +11,7 @@ export default function add(...binaryStrings: string[]): string {
     throw new Error('NOT ENOUGH ARGUMENTS');
   }
 
-  const numbers = binaryStrings.map((binaryString) => parse2Comp(binaryString));
+  const numbers = binaryStrings.map((binaryString) => int32(binaryString));
 
   const sum = numbers.reduce((acc, cur) => (acc + cur) % 2 ** 32, 0);
 

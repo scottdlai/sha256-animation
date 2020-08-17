@@ -1,4 +1,4 @@
-import parse2Comp from '../utilities/parse2Comp';
+import int32 from '../utilities/int32';
 import to32bits from '../utilities/to32bits';
 
 /**
@@ -10,9 +10,9 @@ import to32bits from '../utilities/to32bits';
  * @param z binary string
  */
 export default function majority(x: string, y: string, z: string): string {
-  const a = parse2Comp(x);
-  const b = parse2Comp(y);
-  const c = parse2Comp(z);
+  const a = int32(x);
+  const b = int32(y);
+  const c = int32(z);
 
   return to32bits((a & b) | (a & c) | (b & c));
 }

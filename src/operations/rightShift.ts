@@ -1,4 +1,4 @@
-import parse2Comp from '../utilities/parse2Comp';
+import int32 from '../utilities/int32';
 import to32bits from '../utilities/to32bits';
 
 /**
@@ -17,7 +17,7 @@ export default function rightShift(s: string, n: number): string {
     return to32bits(0);
   }
 
-  const number = parse2Comp(s);
+  const number = int32(s);
 
   return to32bits(number >>> n);
 }
