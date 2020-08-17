@@ -6,7 +6,7 @@ import title from '../utilities/title';
 import { green } from 'chalk';
 
 export default function toChunks(binaryString: string): string[] {
-  if (!binaryString.match(/^[0-1]{512,}$/g)) {
+  if (!(/^[0-1]{512,}$/g).test(binaryString)) {
     throw new Error('NOT A BINARY STRING + ' + binaryString);
   }
 

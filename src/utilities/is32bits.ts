@@ -4,5 +4,7 @@
  * @param s string to check
  */
 export default function is32Bits(s: string): boolean {
-  return s.match(/^[0-1]{32}$/g) !== null;
+  const pattern = /^[0-1]{32}$/g;
+  
+  return pattern.test(s);
 }

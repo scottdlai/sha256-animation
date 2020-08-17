@@ -12,7 +12,7 @@ import { yellow, green } from 'chalk';
  * @param message binary string to be padded
  */
 export default function padding(message: string) {
-  if (!message.match(/^[0-1]{0,}$/g)) {
+  if (!(/^[0-1]{0,}$/g).test(message)) {
     throw new Error('NOT A BINARY STRING ' + message);
   }
 

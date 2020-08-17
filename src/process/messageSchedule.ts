@@ -31,7 +31,7 @@ export default function messageSchedule(chunk: string): string[] {
 }
 
 export async function messageScheduleAnimation(chunk: string) {
-  if (!chunk.match(/^[0-1]{512}$/g)) {
+  if (!(/^[0-1]{512}$/g).test(chunk)) {
     throw new Error('NOT A 512 BIT CHUNK ' + chunk);
   }
 
