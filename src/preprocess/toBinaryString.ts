@@ -47,5 +47,5 @@ export async function toBinaryStringAnimation(message: string) {
  * @param message message to be converted
  */
 function toByteArray(message: string) {
-  return message.split('').map((character) => character.charCodeAt(0));
+  return [...message].map((character) => character.charCodeAt(0));
 }
