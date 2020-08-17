@@ -5,6 +5,11 @@ import speed from '../utilities/speed';
 import title from '../utilities/title';
 import { green } from 'chalk';
 
+/**
+ * Breaks the specified binary string into blocks of 512-bit string.
+ * 
+ * @param binaryString binary string
+ */
 export default function toChunks(binaryString: string): string[] {
   if (!(/^[0-1]{512,}$/g).test(binaryString)) {
     throw new Error('NOT A BINARY STRING + ' + binaryString);
@@ -15,6 +20,12 @@ export default function toChunks(binaryString: string): string[] {
   return chunks;
 }
 
+/**
+ * Animates the process of breaking the binary string into blocks of 512-bit
+ * string and returns the result.
+ *  
+ * @param binaryString binary string
+ */
 export async function toChunksAnimation(binaryString: string) {
   const chunks = toChunks(binaryString);
 
@@ -27,7 +38,7 @@ export async function toChunksAnimation(binaryString: string) {
     await sleep(speed.medium);
     stdout.write(green`[${i}]: `);
     await sleep(speed.medium);
-    stdout.write(chunks[i]);
+    stdout.write(chunks[i] + '\n');
   }
 
   await sleep(speed.medium);
