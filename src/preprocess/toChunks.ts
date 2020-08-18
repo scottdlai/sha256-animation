@@ -37,7 +37,7 @@ export async function toChunksAnimation(binaryString: string) {
     await sleep(speed.medium);
     stdout.write(green`[${i}]: `);
     await sleep(speed.medium);
-    stdout.write(chunks[i] + '\n');
+    stdout.write(`${chunks[i]}\n\n`);
   }
 
   await sleep(speed.medium);
