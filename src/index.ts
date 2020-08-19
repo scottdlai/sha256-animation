@@ -25,7 +25,7 @@ if (setSpeed) {
 }
 
 if (animation) {
-  hashAnimation(args[0] ?? '');
+  hashAnimation(args.join(' '));
 } else {
-  console.log(hash(args[0] ?? ''));
+  console.log(hash(args.join(' ')));
 }
