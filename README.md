@@ -10,7 +10,7 @@ Console application for SHA 256 algorithm.
 npm install -g sha256-animation
 ```
 
-Or run the package direcly through npx
+Or run the package direcly through `npx`
 
 ```zsh
 npx sha256-animation <MESSAGE>
