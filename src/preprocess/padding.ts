@@ -37,7 +37,7 @@ export async function paddingAnimation(message: string) {
 
   stdout.write(clearTerminal);
   await sleep(speed.medium);
-  stdout.write(title(`padding ${message.length} -> ${padded.length}`));
+  stdout.write(title(`padding ${message.length} -> ${padded.length} (bits)`));
   await sleep(speed.medium);
   stdout.write(green(message));
   await sleep(speed.slow);
