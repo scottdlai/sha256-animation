@@ -8,7 +8,7 @@ import { yellow, green } from 'chalk';
 
 /**
  * Returns the padded message.
- * 
+ *
  * @param message binary string to be padded
  */
 export default function padding(message: string) {
@@ -29,7 +29,7 @@ export default function padding(message: string) {
 
 /**
  * Animates the process of padding and returns the result.
- * 
+ *
  * @param message binary string to be padded
  */
 export async function paddingAnimation(message: string) {
